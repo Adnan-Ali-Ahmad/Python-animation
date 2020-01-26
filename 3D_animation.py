@@ -58,7 +58,7 @@ and frequency of output (snapshot)
 t = 0.; dt = 89236.7; snapshot = 50
 time = 0.
 
-def update_lines(i, dataDots,dots) :
+def update_anim(i, dataDots,dots) :
     
     time = round(i*snapshot*dt/(31557600.0),2)
     ax.set_xlabel('x (AU)\nt = ' + str(time)+ ' years')
@@ -97,9 +97,9 @@ ax.set_zlim3d([zmin,zmax])
 ax.set_zlabel('z (AU)')
 
 # Creating the Animation object
-line_ani = animation.FuncAnimation(fig, update_lines, x[0].size, fargs=(data,dots),
+anim = animation.FuncAnimation(fig, update_anim, x[0].size, fargs=(data,dots),
                               interval=1, blit=False)
 
-#line_ani.save('filename.mp4', writer=writer)
+#anim.save('filename.mp4', writer=writer)
 
 plt.show()
