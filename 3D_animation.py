@@ -76,7 +76,7 @@ def update_lines(i, dataDots,dots) :
 # Attaching 3D axis to the figure
 fig = plt.figure()
 ax = p3.Axes3D(fig)
-ax.scatter(0,0,0,marker='*',color='k')
+
 
 data_list = []
 for p in range(N):
