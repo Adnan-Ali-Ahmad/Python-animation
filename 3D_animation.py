@@ -58,12 +58,12 @@ and frequency of output (snapshot)
 t = 0.; dt = 89236.7; snapshot = 50
 time = 0.
 
-def update_lines(i, dataLines,dots) :
+def update_lines(i, dataDots,dots) :
     
     time = round(i*snapshot*dt/(31557600.0),2)
     ax.set_xlabel('x (AU)\nt = ' + str(time)+ ' years')
     ax.set_ylabel('y (AU)\nt = ' + str(time)+ ' years')
-    for dot, data in zip(dots, dataLines) :
+    for dot, data in zip(dots, dataDots) :
             dot.set_data(data[0:2,i])
             dot.set_3d_properties(data[2,i])
         
